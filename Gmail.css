@@ -1,0 +1,120 @@
+.gmail-container {
+  display: flex;
+  height: 500px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f6f8fc;
+}
+
+/* サイドバー */
+.gmail-sidebar {
+  width: 240px;
+  background-color: #f6f8fc;
+  padding: 16px;
+  border-right: 1px solid #e1e3e6;
+}
+
+.compose-btn {
+  background-color: #c2e7ff;
+  color: #001d35;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 16px;
+  border-radius: 0 16px 16px 0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #3c4043;
+}
+
+.sidebar-menu li.active {
+  background-color: #d3e3fd;
+  color: #041e49;
+  font-weight: bold;
+}
+
+.sidebar-menu li:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+/* メインエリア */
+.gmail-main {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.gmail-toolbar {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e1e3e6;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3c4043;
+}
+
+.mail-list {
+  overflow-y: auto;
+}
+
+.mail-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f4;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.mail-item:hover {
+  box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+  z-index: 1;
+}
+
+.mail-item.unread {
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.mail-sender {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 12px;
+}
+
+.mail-subject {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #5f6368;
+}
+
+.mail-item.unread .mail-subject {
+  color: #202124;
+}
+
+.mail-time {
+  width: 80px;
+  text-align: right;
+  font-size: 12px;
+  color: #5f6368;
+}
